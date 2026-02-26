@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
 const menuItems = [
@@ -36,7 +36,7 @@ const menuItems = [
 ];
 
 const MenuSection = () => {
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -47,12 +47,12 @@ const MenuSection = () => {
         }
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { y: 40, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
-            transition: { duration: 1, ease: [0.22, 1, 0.36, 1] }
+            transition: { duration: 1, ease: [0.22, 1, 0.36, 1] as any }
         }
     };
 

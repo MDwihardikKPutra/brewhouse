@@ -14,7 +14,7 @@ const LocationSection = () => {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as any }}
                         className="space-y-24"
                     >
                         <div className="space-y-10">
@@ -73,7 +73,7 @@ const LocationSection = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] as any }}
                         className="relative h-[600px] w-full grayscale contrast-125 brightness-[0.4] rounded-sm overflow-hidden border border-white/5 group"
                     >
                         <iframe

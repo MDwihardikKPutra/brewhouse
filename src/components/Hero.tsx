@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import Image from "next/image";
 
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
     const scale = useTransform(scrollY, [0, 500], [1, 1.1]);
 
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -21,20 +21,20 @@ const Hero = () => {
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { y: 40, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
-            transition: { duration: 1.5, ease: [0.22, 1, 0.36, 1] },
+            transition: { duration: 1.5, ease: [0.22, 1, 0.36, 1] as any },
         },
     };
 
-    const textRevealVariants = {
+    const textRevealVariants: Variants = {
         hidden: { y: "100%" },
         visible: {
             y: 0,
-            transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] }
+            transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] as any }
         }
     };
 
@@ -103,7 +103,7 @@ const Hero = () => {
                         <motion.div
                             initial={{ x: "-100%" }}
                             whileHover={{ x: "0%" }}
-                            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as any }}
                             className="absolute inset-0 bg-white z-0"
                         />
                     </motion.button>

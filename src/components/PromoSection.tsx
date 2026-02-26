@@ -26,7 +26,7 @@ const PromoSection = () => {
             <motion.div
                 initial={false}
                 animate={{ rotateY: revealed ? 180 : 0 }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
                 style={{ transformStyle: "preserve-3d" }}
                 className="relative w-full h-full"
             >
